@@ -115,6 +115,62 @@ button:hover img {
 .gameCard .button-wrapper button:hover {
   filter: drop-shadow(-5px -5px 10px #6ef4c4);
 } */
+
+.social-media-card {
+  background: rgba(255, 255, 255, 0.21);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.8px);
+  -webkit-backdrop-filter: blur(8.8px);
+  display: flex;
+  align-items: center;
+  max-width: 280px;
+  width: 100%;
+}
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #4b024a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f46ef1;
+}
+.loopAnim {
+  -webkit-animation: loop 6s infinite linear;
+  animation: loop 6s infinite linear;
+}
+@keyframes loop {
+  100% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+.heroTitle {
+  -webkit-animation: upDown 2s infinite alternate;
+  animation: upDown 2s infinite alternate;
+}
+@-webkit-keyframes upDown {
+  0% {
+    transform: translateY(-60px);
+  }
+  100% {
+    transform: translateY(40px);
+  }
+}
+@keyframes upDown {
+  0% {
+    transform: translateY(-60px);
+  }
+  100% {
+    transform: translateY(40px);
+  }
+}
+
 @media (max-width: 768px) {
   .popular-heading::before,
   .popular-heading::after {

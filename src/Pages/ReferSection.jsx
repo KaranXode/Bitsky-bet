@@ -8,7 +8,7 @@ import SmallButton from "../Components/SmallButton/SmallButton";
 export default function ReferSection() {
   return (
     <div className="wrapper">
-      <div className="gap-3 px-4 py-10 mx-auto lg:flex">
+      <div className="gap-6 px-4 py-10 mx-auto lg:flex">
         <div className="relative max-w-[762px] w-full cardOne  mx-auto">
           <img src={referBg} alt="image" className="rounded-[2rem] " />
           <div className="absolute top-[24px] flex items-center justify-end w-full h-full">
