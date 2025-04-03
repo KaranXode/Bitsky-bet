@@ -17,7 +17,7 @@ function App() {
       <ParallaxImage/>
       <Layout/>
       <Footer/>
-      {/* <AccountScreen/> */}
+      <AccountScreen/>
      
     </div>
     </>

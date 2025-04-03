@@ -20,6 +20,7 @@ export default function Hero() {
             <div className="w-3/4 text-center sm:w-1/2 lg:w-full">
               <img src={heroHead} alt="image" className="upDownAnim" />
               <SmallButton
+              value="#Profile"
                 className={"max-w-[280px] w-3/5 sm:w-full -scale-x-100 sm:text-[34px] top-0 sm:top-[-20px] left-[-40px]"}
                 textDirection="-scale-x-100 sm:text-[34px]"
               />

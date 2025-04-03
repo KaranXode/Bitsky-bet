@@ -20,7 +20,7 @@ export default function WelcomeBanner() {
       </div>
       <div className="absolute top-0 flex items-center justify-center w-full ">
        <div className=" arrowIcon">
-       <img src={arrowIcon} className="rotate-90 w-[48px] md:w-[80px]" alt="icon" />
+       <img src={arrowIcon} className="rotate-90 w-[48px] md:w-[80px] relative top-[16px] md:static" alt="icon" />
        </div>
       </div>
     </div>
