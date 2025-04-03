@@ -31,7 +31,7 @@
 }
 .footer {
   clip-path: polygon(0 19%, 0% 100%, 100% 100%, 100% 2%);
-  background-color: #251825;
+  background-color: #251825b8;
   padding: 76px 28px 24px 24px;
 }
 .footer-text {
@@ -39,27 +39,28 @@
   font-weight: 600;
 }
 
-.primary-btn-lg {
-  display: inline-block;
-  color: #4b024a;
-  padding: 20px 40px;
-  cursor: pointer;
-  width: 273px;
-  height: 100px;
-  background: linear-gradient(to bottom, #f46ef1, #ab0fa1);
-  clip-path: path(
-    "M14.4627 0.581863L244.419 8.10249C250.261 8.29356 255.361 12.1158 257.183 17.6696L272.303 63.7394C275.169 72.4711 268.932 81.5332 259.753 81.9749L23.5207 93.3437C16.3149 93.6905 10.0393 88.4719 9.06607 81.3236L0.222046 16.3644C-0.939941 7.82958 5.85376 0.300311 14.4627 0.581863Z"
-  );
-  transition: all 0.5s;
-  font-family: "Ceviche One", system-ui;
-}
-
 button:hover {
-  filter: drop-shadow(-5px -5px 10px #6ef4c4);
+  filter: drop-shadow(-4px 16px 25px #f46ef1);
 }
 button:hover img {
-  filter: brightness(0) saturate(100%) invert(70%) sepia(18%) saturate(1018%)
-    hue-rotate(98deg) brightness(97%) contrast(98%);
+  filter: brightness(0) saturate(100%) invert(75%) sepia(88%) saturate(3559%)
+    hue-rotate(252deg) brightness(97%) contrast(96%);
+}
+.welcomeBanner {
+  box-shadow: 1px 23px 34px 16px #000000;
+  background-color: #000000;
+}
+.arrowIcon {
+  padding: 0 72px;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.7371323529411764) 0%,
+    rgba(0, 0, 0, 1) 15%,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(0, 0, 0, 1) 85%,
+    rgba(0, 0, 0, 0.6783088235294117) 100%
+  );
 }
 .popular-heading {
   position: relative;
@@ -83,6 +84,9 @@ button:hover img {
   height: 2px;
   width: 40%;
   background-color: #494949;
+}
+.zoom-effect {
+  @apply transition duration-500 transform hover:scale-110;
 }
 
 .gameCard {
@@ -138,7 +142,7 @@ button:hover img {
   }
 }
 
-.heroTitle {
+.upDownAnim {
   -webkit-animation: upDown 2s infinite alternate;
   animation: upDown 2s infinite alternate;
 }
@@ -158,7 +162,26 @@ button:hover img {
     transform: translateY(40px);
   }
 }
-
+.downUpAnim {
+  -webkit-animation: downUp 2s infinite alternate;
+  animation: downUp 2s infinite alternate;
+}
+@-webkit-keyframes downUp {
+  0% {
+    transform: translateY(60px);
+  }
+  100% {
+    transform: translateY(-40px);
+  }
+}
+@keyframes downUp {
+  0% {
+    transform: translateY(60px);
+  }
+  100% {
+    transform: translateY(-40px);
+  }
+}
 @media (max-width: 768px) {
   .popular-heading::before,
   .popular-heading::after {
@@ -167,5 +190,33 @@ button:hover img {
   .footer {
     clip-path: polygon(0 10%, 0% 100%, 100% 100%, 100% 2%);
     padding: 76px 16px 24px 16px;
+  }
+}
+.scale-up-center {
+  -webkit-animation: scale-up-center 2s cubic-bezier(0.39, 0.575, 0.565, 1)
+    infinite alternate-reverse forwards;
+  animation: scale-up-center 2s cubic-bezier(0.39, 0.575, 0.565, 1) infinite
+    alternate-reverse forwards;
+}
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    filter: drop-shadow(0px -20px 20px #55c7df);
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    filter: drop-shadow(0px -20px 20px #55c7df);
   }
 }

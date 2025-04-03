@@ -27,7 +27,7 @@ export default function PopularGames() {
       <div className="p-3 mt-8">
         <div className="grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
           {gamesImages.map((item, index) => (
-            <div className="gameCard">
+            <div className="cursor-pointer gameCard zoom-effect">
               <div className="relative mb-4">
                 <HeartIcon className="absolute top-[4px] left-[4px] md:top-[8px] md:left-[8px]" />
                 <div className="mb-5">

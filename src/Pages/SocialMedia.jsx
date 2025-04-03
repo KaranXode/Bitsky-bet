@@ -28,12 +28,12 @@ export default function SocialMedia() {
         <div className="text-[10px] font-semibold md:text-xl relative top-[12px] sm:top-[24px] lg:text-3xl 2xl:text-[42px] uppercase">Follow Us on &gt;&gt;</div>
         <div className="grid w-[70%] grid-cols-3 gap-1 md:gap-3 px-3 md:px-20">
           {socialMediaData.map((item, index) => (
-            <div className="gap-1 p-1 social-media-card md:p-3 md:gap-4">
+            <a href="#" className="gap-1 p-1 cursor-pointer social-media-card md:p-3 md:gap-4 zoom-effect">
               <span>
                 <img src={item.icon} alt={`${item.name}`}  className="w-4 sm:w-3/4 xl:w-auto"/>
               </span>
               <div className="text-[8px] sm:text-xs font-semibold lg:text-xl xl:text-xl whitespace-nowrap pr-[6px] sm:pr-0" >{item.name}</div>
-            </div>
+            </a>
           ))}
         </div>
       </div>

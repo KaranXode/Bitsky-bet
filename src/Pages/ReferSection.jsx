@@ -17,7 +17,7 @@ export default function ReferSection() {
               <p className="sm:text-2xl md:text-3xl 2xl:text-5xl font-cevicheOne">
                 Refer Your Friend and Earn Rewards!
               </p>
-              <p className="my-2 text-xs sm:text-sm lg:my-4 xl:text-xl">
+              <p className="my-1 sm:my-2 text-[10px] sm:text-sm lg:my-4 xl:text-xl">
                 Refer your friends and enjoy exclusive bonuses and discounts.
               </p>
              <SmallButton className="w-1/2 sm:w-auto"/>
@@ -31,7 +31,7 @@ export default function ReferSection() {
               <p className="sm:text-2xl md:text-3xl 2xl:text-5xl font-cevicheOne">
                 Where the excitement knows no bounds
               </p>
-              <p className="my-2 text-xs sm:text-sm lg:my-4 xl:text-xl">
+              <p className="my-1 sm:my-2 text-[10px] sm:text-sm lg:my-4 xl:text-xl">
                 Experience unparalleled joy with our exclusive perks, from
                 high-stakes adventures to unforgettable triumphs!
               </p>
