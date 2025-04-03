@@ -30,7 +30,7 @@ export default function SocialMedia() {
           {socialMediaData.map((item, index) => (
             <div className="gap-1 p-1 social-media-card md:p-3 md:gap-4">
               <span>
-                <img src={item.icon} alt={`${item.name}`}  className="w-[45%] sm:w-3/4 xl:w-auto"/>
+                <img src={item.icon} alt={`${item.name}`}  className="w-4 sm:w-3/4 xl:w-auto"/>
               </span>
               <div className="text-[8px] sm:text-xs font-semibold lg:text-xl xl:text-xl whitespace-nowrap pr-[6px] sm:pr-0" >{item.name}</div>
             </div>
