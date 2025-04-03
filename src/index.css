@@ -34,7 +34,7 @@
     background-color: #f9f9f9;
   }
 }
-.wrapper{
+.wrapper {
   max-width: 1560px;
   margin: 0 auto;
 }
@@ -67,14 +67,17 @@
 }
 
 button:hover {
-  color: #fff;
-  filter: drop-shadow(-5px -5px 10px #f46ef1);
+  filter: drop-shadow(-5px -5px 10px #6ef4c4);
+}
+button:hover img {
+  filter: brightness(0) saturate(100%) invert(70%) sepia(18%) saturate(1018%)
+    hue-rotate(98deg) brightness(97%) contrast(98%);
 }
 .popular-heading {
   position: relative;
   text-align: center;
 }
-.popular-heading::after{
+.popular-heading::after {
   content: "";
   position: absolute;
   left: 0;
@@ -92,16 +95,31 @@ button:hover {
   height: 2px;
   width: 40%;
   background-color: #494949;
-
 }
-.gameCard{
-  width: 296px;
-  height: 320px;
+
+.gameCard {
   padding: 16px;
   border-radius: 24px;
   background-color: #252525;
 }
+.gameCard:hover {
+  filter: drop-shadow(-2px 0px 10px #028032b6);
+}
+
+.gameCard:hover .button-wrapper button img,
+.gameCard button:hover img {
+  filter: brightness(0) saturate(100%) invert(70%) sepia(18%) saturate(1018%)
+    hue-rotate(98deg) brightness(97%) contrast(98%);
+}
+/* .gameCard:hover .button-wrapper button img,
+.gameCard .button-wrapper button:hover {
+  filter: drop-shadow(-5px -5px 10px #6ef4c4);
+} */
 @media (max-width: 768px) {
+  .popular-heading::before,
+  .popular-heading::after {
+    width: 30%;
+  }
   .footer {
     clip-path: polygon(0 10%, 0% 100%, 100% 100%, 100% 2%);
     padding: 76px 16px 24px 16px;

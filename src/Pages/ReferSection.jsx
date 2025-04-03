@@ -3,38 +3,41 @@ import referBg from "../assets/images/referCharBg.png";
 import bonusBg from "../assets/images/bonusCharBg.png";
 import charOne from "../assets/Icons/charOne.png";
 import playBg from "../assets/images/play-of-bg.png";
+import SmallButton from "../Components/SmallButton/SmallButton";
 
 export default function ReferSection() {
   return (
     <div className="wrapper">
-      <div className="gap-3 px-4 py-10 lg:flex">
-        <div className="relative max-w-[762px] w-full cardOne">
+      <div className="gap-3 px-4 py-10 mx-auto lg:flex">
+        <div className="relative max-w-[762px] w-full cardOne  mx-auto">
           <img src={referBg} alt="image" className="rounded-[2rem] " />
-          <div className="absolute top-0 flex items-center justify-end w-full h-full">
+          <div className="absolute top-[24px] flex items-center justify-end w-full h-full">
            
-            <div className="max-w-sm p-3">
-              <p className="text-2xl md:text-3xl xl:text-5xl font-cevicheOne">
+            <div className="max-w-[54%] sm:max-w-[50%] p-3">
+              <p className="sm:text-2xl md:text-3xl 2xl:text-5xl font-cevicheOne">
                 Refer Your Friend and Earn Rewards!
               </p>
-              <p className="mt-3 text-xl">
+              <p className="my-2 text-xs sm:text-sm lg:my-4 xl:text-xl">
                 Refer your friends and enjoy exclusive bonuses and discounts.
               </p>
-              <button>pLay now</button>
+             <SmallButton className="w-1/2 sm:w-auto"/>
             </div>
           </div>
         </div>
-        <div className="relative max-w-[762px] w-full cardTwo">
+        <div className="relative max-w-[762px] w-full cardTwo mx-auto">
           <img src={bonusBg} alt="image" className="rounded-[2rem] " />
-          <div className="absolute top-0 flex items-center justify-start w-full h-full text-right">
-            <div className="max-w-md p-3">
-              <p className="text-2xl md:text-3xl xl:text-5xl font-cevicheOne">
+          <div className="absolute top-[16px] sm:top-[24px] flex items-center justify-start w-full h-full text-right">
+            <div className="max-w-[58%] sm:max-w-[56%] p-3">
+              <p className="sm:text-2xl md:text-3xl 2xl:text-5xl font-cevicheOne">
                 Where the excitement knows no bounds
               </p>
-              <p className="mt-3 text-xl">
+              <p className="my-2 text-xs sm:text-sm lg:my-4 xl:text-xl">
                 Experience unparalleled joy with our exclusive perks, from
                 high-stakes adventures to unforgettable triumphs!
               </p>
-              <button>pLay now</button>
+              <SmallButton className="w-1/2 sm:w-auto -scale-x-100" textDirection="-scale-x-100"/>
+
+
             </div>
           </div>
         </div>
