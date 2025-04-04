@@ -249,7 +249,7 @@ input:focus-visible {
   content: "";
   position: absolute;
   width: 3px;
-  height: 120%;
+  height: 140%;
   background: #3f3f3f;
   top: 0;
 }
@@ -274,7 +274,7 @@ input:focus-visible {
   content: "";
   position: absolute;
   width: 3px;
-  height: 120%;
+  height: 140%;
   background: #fff;
   top: 0;
 }
@@ -357,6 +357,10 @@ input:focus-visible {
   right: -70px;
   top: -9px;
 }
+.dotactive{
+  background: rgb(255, 0, 238);
+
+}
 .tab-active + .circle-main .circle-inner {
   background: rgb(255, 0, 238);
 }
@@ -372,14 +376,43 @@ input:focus-visible {
 
 @media (max-width: 1280px) {
   .trapezoid-top {
-    height: auto;
+    height: 40px;
   }
   .trapezoid-bottom {
-    height: auto;
+    height: 40px;
   }
-
+  .trapezoid-bottom.tab-active::before,
+  .trapezoid-bottom.tab-active::after {
+   display: none;
+  }
+  
+  .trapezoid-top.tab-active::before,
+  .trapezoid-top.tab-active::after {
+   display: none;
+  }
+  .trapezoid-top::before,
+  .trapezoid-top::after {
+   display: none;
+  }
+  .tab-main .circle-main{
+    display: none;
+  }
+  .trapezoid-top{
+    border: none;
+  }
+  .trapezoid-bottom{
+    border: none;
+  }
+  .tab-border{
+    border-bottom:2px dotted #3f3f3f   ;
+  }
+  .trapezoid-bottom{
+    border: none;
+  }
  
 }
+
+
 @media (max-width: 768px) {
   .circle-main{
     width: 11px;
@@ -389,6 +422,12 @@ input:focus-visible {
   .circle-inner{
     width: 5px;
     height: 5px;
+  }
+  .trapezoid-top {
+    height: auto;
+  }
+  .trapezoid-bottom {
+    height: auto;
   }
 
 }

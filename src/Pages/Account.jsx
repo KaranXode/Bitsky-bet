@@ -6,38 +6,54 @@ import headerBg from "../assets/Icons/headerBg.svg";
 import LshapeTopLeft from "../assets/Icons/Lshape-topLeft.svg";
 import LshapeTopRight from "../assets/Icons/Lshape-topRight.svg";
 import CircleDot from "../Components/CircleDot/CircleDot";
-import Button from './../Components/Button/Button';
+import Button from "./../Components/Button/Button";
 import { Link } from "react-router-dom";
+import cashbg from "../assets/Icons/cashBg.svg";
+import avatar from "../assets/Icons/accountAvatar.svg";
+import AccountDetails from "../Components/AccountDetails/AccountDetails";
 
 const AccountScreen = () => {
   const [activeTab, setActiveTab] = useState("My Account");
 
   const tabs = ["My Account", "Wallet", "All Transactions", "My Affiliates"];
+;
 
   return (
     <div className="min-h-screen text-white bg-[#0E0E0E]" id="Profile">
-      <div className="flex items-center justify-between ">
-        <Link to="/"><img src={inBitskyLogo} alt="logo" /></Link>
-        <div className="relative ">
+      <div className="flex flex-col items-center justify-between md:flex-row ">
+        <Link to="/">
+          <img src={inBitskyLogo} alt="logo" className="h-[60px] md:h-auto" />
+        </Link>
+        <div className="relative w-full">
           <div className="">
-            <img src={headerBg} alt="logo" className="min-h-[142px]" />
+            <img
+              src={headerBg}
+              alt="logo"
+              className="min-h-[142px] hidden md:block"
+            />
           </div>
-          <div className="absolute top-0 flex items-center justify-between w-full h-full">
-            <div className="flex flex-wrap items-center justify-between w-full gap-4">
-              <div></div>
-              <div className="flex items-center gap-2 px-4 py-2 bg-gray-900 rounded-lg">
-                <span className="text-lg">10,000 USD</span>
-                <button className="px-2 py-1 text-black bg-green-500 rounded-full">
-                  +
-                </button>
+          <div className="static top-0 flex items-center justify-between w-full h-full px-4 md:absolute">
+            <div className="flex items-center justify-between w-full gap-4 p-3 md:p-0">
+              <div className="hidden md:block"></div>
+              <div className="relative flex items-center w-[130px] sm:w-[150px] lg:w-auto">
+                <img src={cashbg} alt="icon" />
+                <div className="absolute top-0 flex items-center justify-center w-full h-full">
+                  <span className="text-xs sm:text-sm lg:text-lg">
+                    10,000{" "}
+                    <span className="text-[10px] sm:text-xs text-[#6D6D6D] font-semibold">
+                      USD
+                    </span>{" "}
+                  </span>
+                  <button className="flex items-center justify-center w-[24px] h-[24px] md:w-[30px] md:h-[30px] font-[500] absolute right-[-12px] text-xl md:text-2xl  text-black bg-[#02E902] rounded-full">
+                    +
+                  </button>
+                </div>
               </div>
-              <div className="flex items-center gap-2">
-                <img
-                  src="https://via.placeholder.com/40"
-                  alt="User Avatar"
-                  className="w-10 h-10 border-2 border-pink-500 rounded-full"
-                />
-                <span className="text-lg">John123</span>
+              <div className="relative lg:bottom-[10px] w-[150px] lg:w-auto right-[14px]">
+                <img src={avatar} alt="User Avatar" />
+                <span className="absolute top-0 flex items-center justify-center w-full h-full text-xs md:text-sm left-[24px] font-semibold lg:text-base">
+                  John123
+                </span>
               </div>
             </div>
           </div>
@@ -48,12 +64,14 @@ const AccountScreen = () => {
         <div className="flex justify-center mt-5">
           <div className="flex justify-between w-full px-2 pb-2 md:px-10">
             {tabs.map((tab, index) => (
-              <div className={`relative w-full  ${
-                index % 2 ? "border-bottom-main" : " "
-              }`}>
+              <div
+                className={`relative w-full tab-main ${
+                  index % 2 ? "border-bottom-main" : " "
+                }`}
+              >
                 <span
                   key={tab}
-                  className={`cursor-pointer text-sm xl:text-2xl pb-1 font-cevicheOne flex justify-center items-center ${
+                  className={`cursor-pointer text-xs sm:text-sm md:text-lg xl:text-2xl pb-1 font-cevicheOne flex justify-center items-center ${
                     index % 2 ? " trapezoid-bottom" : " trapezoid-top"
                   }  ${
                     activeTab === tab
@@ -105,62 +123,7 @@ const AccountScreen = () => {
                 </div>
               </div>
 
-              <div className="grid w-full grid-cols-2 gap-5 mt-8">
-                <div>
-                  <label className="block text-base font-bold text-white">
-                    First Name
-                  </label>
-                  <input
-                    type="text"
-                    className="w-full p-2 bg-transparent rounded"
-                  />
-                </div>
-                <div>
-                  <label className="block text-base font-bold text-white">
-                    Last Name
-                  </label>
-                  <input
-                    type="text"
-                    className="w-full p-2 bg-transparent rounded"
-                  />
-                </div>
-                <div>
-                  <label className="block text-base font-bold text-white">
-                    User Name
-                  </label>
-                  <input
-                    type="text"
-                    className="w-full p-2 bg-transparent rounded"
-                  />
-                </div>
-                <div>
-                  <label className="block text-base font-bold text-white">
-                    Date of Birth
-                  </label>
-                  <input
-                    type="date"
-                    className="w-full p-2 bg-transparent rounded"
-                  />
-                </div>
-                <div>
-                  <label className="block text-base font-bold text-white">
-                    Email Address
-                  </label>
-                  <input
-                    type="email"
-                    className="w-full p-2 bg-transparent rounded"
-                  />
-                </div>
-                <div>
-                  <label className="block text-base font-bold text-white">
-                    Phone Number
-                  </label>
-                  <input
-                    type="text"
-                    className="w-full p-2 bg-transparent rounded"
-                  />
-                </div>
-              </div>
+             <AccountDetails/>
             </div>
           )}
 
@@ -181,8 +144,8 @@ const AccountScreen = () => {
           )}
 
           <div className="flex justify-end mt-8">
-          <Link to="/">
-            <Button className={"w-auto"} />
+            <Link to="/">
+              <Button className={"w-auto"} />
             </Link>
           </div>
         </div>
