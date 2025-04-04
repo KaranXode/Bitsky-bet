@@ -129,17 +129,17 @@ const AccountScreen = () => {
 
           {activeTab === "Wallet" && (
             <div className="mt-12 text-base font-bold text-center text-white">
-              Wallet details coming soon...
+              Wallet 
             </div>
           )}
           {activeTab === "All Transactions" && (
             <div className="mt-12 text-base font-bold text-center text-white">
-              Transaction history will be displayed here...
+              Transaction 
             </div>
           )}
           {activeTab === "My Affiliates" && (
             <div className="mt-12 text-base font-bold text-center text-white">
-              Affiliate program details coming soon...
+              Affiliate 
             </div>
           )}
 

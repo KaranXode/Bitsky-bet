@@ -14,7 +14,7 @@ export default function SubscribeSection() {
             alt="image"
             className="rounded-[2rem] mb-3 lg:mb-0"
           />
-          <div className="absolute top-0 flex items-center w-full h-full left-[24px]">
+          <div className="absolute top-0 flex items-center w-full h-full md:left-[24px]">
             <div className="max-w-[54%] sm:max-w-[60%] p-6">
               <p className="sm:text-2xl md:text-3xl 2xl:text-5xl font-cevicheOne">
                 Subscribe to our news!
