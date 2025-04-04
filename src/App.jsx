@@ -1,19 +1,11 @@
 import "./App.css";
-import Footer from "./Components/Footer/Footer";
-import Layout from "./Layout/Layout";
-import Account from "./Pages/Account";
-import AccountScreen from "./Pages/Account";
-import ParallaxImage from "./Components/ParallaxImage/ParallaxImage";
+import Home from "./Pages/Home";
+import Routing from "./Route/Routing";
 
 function App() {
   return (
     <>
-      <div>
-        <ParallaxImage />
-        <Layout />
-        <Footer />
-        <AccountScreen />
-      </div>
+      <Routing />
     </>
   );
 }

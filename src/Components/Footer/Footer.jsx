@@ -5,6 +5,7 @@ import discord from "../../assets/Icons/discord.svg";
 import twitter from "../../assets/Icons/twitter.svg";
 import instgram from "../../assets/Icons/instagram.svg";
 import youtube from "../../assets/Icons/youtube.svg";
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
@@ -14,7 +15,7 @@ export default function Footer() {
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
             <div>
               <div className="flex justify-center text-teal-300 sm:justify-start">
-                <img src={FIcon} alt="Icon" />
+              <Link to="/"><img src={FIcon} alt="Icon" /></Link>
               </div>
 
               <p className="max-w-md mx-auto mt-6 leading-relaxed text-center footer-text sm:mx-0 sm:text-left">

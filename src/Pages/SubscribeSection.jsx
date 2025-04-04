@@ -1,8 +1,8 @@
 import React from "react";
 import subscribeBg from "../assets/images/subscribeBg.png";
 import questionBg from "../assets/images/QuestionBg.png";
-import SmallButton from "../Components/SmallButton/SmallButton";
 import { FaEnvelope } from "react-icons/fa";
+import Button from "../Components/Button/Button";
 
 export default function SubscribeSection() {
   return (
@@ -24,15 +24,17 @@ export default function SubscribeSection() {
                 promotions and tournaments.
               </p>
               <div className="relative">
-              <FaEnvelope color="#D646D0 " className="absolute top-[6px] sm:top-[16px] left-[16px]"/>
+                <FaEnvelope
+                  color="#D646D0 "
+                  className="absolute top-[6px] sm:top-[16px] left-[16px]"
+                />
                 <input
                   type="text"
-                  
                   placeholder="Your Email Address..."
                   className="bg-[#72005A]  text-[10px] sm:text-sm border-[#E85FE4] border w-[95%] sm:pl-[2.5rem] pl-[2.5rem] p-[6px] sm:p-[10px] rounded-[8px] mb-3"
                 />
               </div>{" "}
-              <SmallButton name={"Subscribe"} className={"w-1/2 sm:w-auto"} />
+              <Button name={"Subscribe"} className={"w-1/2 sm:w-auto"} />
             </div>
           </div>
         </div>
@@ -47,7 +49,7 @@ export default function SubscribeSection() {
                 Visit our FAQ section for comprehensive information on
                 frequently asked questions.
               </p>
-              <SmallButton name={"FAQ Page"} className={"w-1/2 sm:w-auto"} />
+              <Button name={"FAQ Page"} className={"w-1/2 sm:w-auto"} />
             </div>
           </div>
         </div>

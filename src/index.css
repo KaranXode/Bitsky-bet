@@ -377,5 +377,18 @@ input:focus-visible {
   .trapezoid-bottom {
     height: auto;
   }
+
  
+}
+@media (max-width: 768px) {
+  .circle-main{
+    width: 11px;
+    height: 11px;
+    padding: 2px;
+  }
+  .circle-inner{
+    width: 5px;
+    height: 5px;
+  }
+
 }

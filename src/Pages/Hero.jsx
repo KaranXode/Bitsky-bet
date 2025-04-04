@@ -2,12 +2,13 @@ import React from "react";
 import heroBg from "../assets/images/heroBg.png";
 import heroMachine from "../assets/Icons/VendingMachine.svg";
 import heroHead from "../assets/Icons/winbigIcon.svg";
-import SmallButton from "../Components/SmallButton/SmallButton";
 import coin1 from "../assets/Icons/bitcoin1.svg"
 import coin2 from "../assets/Icons/bitcoin2.svg"
 import coin3 from "../assets/Icons/bitcoin3.svg"
 import coin4 from "../assets/Icons/bitcoin4.svg"
 import coin5 from "../assets/Icons/bitcoin5.svg"
+import Button from './../Components/Button/Button';
+import { Link } from "react-router-dom";
 
 
 export default function Hero() {
@@ -19,11 +20,11 @@ export default function Hero() {
           <div className="flex items-center justify-center text-center lg:block">
             <div className="w-3/4 text-center sm:w-1/2 lg:w-full">
               <img src={heroHead} alt="image" className="upDownAnim" />
-              <SmallButton
-              value="#Profile"
+              <Link to="myaccount">
+              <Button
                 className={"max-w-[280px] w-3/5 sm:w-full -scale-x-100 sm:text-[34px] top-0 sm:top-[-20px] left-[-40px]"}
                 textDirection="-scale-x-100 sm:text-[34px]"
-              />
+              /></Link>
             </div>
           </div>
 

@@ -10,9 +10,10 @@ import G8 from "../assets/images/G8.png";
 import G9 from "../assets/images/G9.png";
 import G10 from "../assets/images/G10.png";
 
-
 import HeartIcon from "../Components/HeartIcon/HeartIcon";
-import SmallButton from "../Components/SmallButton/SmallButton";
+
+import Button from "./../Components/Button/Button";
+import { Link } from "react-router-dom";
 
 export default function PopularGames() {
   const gamesImages = [G1, G2, G3, G4, G5, G6, G7, G8, G9, G10];
@@ -34,7 +35,7 @@ export default function PopularGames() {
                   <img src={item} alt="card" className="w-full " />
 
                   <div className=" absolute bottom-[-16px] sm:bottom-[-26px] flex items-center justify-center  w-full button-wrapper">
-                    <SmallButton/>
+                    <Link to="myaccount" className="contents"><Button /></Link>
                   </div>
                 </div>
               </div>

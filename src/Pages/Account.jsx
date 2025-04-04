@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import profile from "../assets/Icons/Profile.svg";
 import headBg from "../assets/Icons/accountHeadbg.svg";
-import SmallButton from "../Components/SmallButton/SmallButton";
 import inBitskyLogo from "../assets/Icons/inBitskyLogo.svg";
 import headerBg from "../assets/Icons/headerBg.svg";
 import LshapeTopLeft from "../assets/Icons/Lshape-topLeft.svg";
 import LshapeTopRight from "../assets/Icons/Lshape-topRight.svg";
 import CircleDot from "../Components/CircleDot/CircleDot";
+import Button from './../Components/Button/Button';
+import { Link } from "react-router-dom";
 
 const AccountScreen = () => {
   const [activeTab, setActiveTab] = useState("My Account");
@@ -16,7 +17,7 @@ const AccountScreen = () => {
   return (
     <div className="min-h-screen text-white bg-[#0E0E0E]" id="Profile">
       <div className="flex items-center justify-between ">
-        <img src={inBitskyLogo} alt="logo" />
+        <Link to="/"><img src={inBitskyLogo} alt="logo" /></Link>
         <div className="relative ">
           <div className="">
             <img src={headerBg} alt="logo" className="min-h-[142px]" />
@@ -45,7 +46,7 @@ const AccountScreen = () => {
 
       <div className="max-w-[1346px] w-full mx-auto">
         <div className="flex justify-center mt-5">
-          <div className="flex justify-between w-full px-10 pb-2">
+          <div className="flex justify-between w-full px-2 pb-2 md:px-10">
             {tabs.map((tab, index) => (
               <div className={`relative w-full  ${
                 index % 2 ? "border-bottom-main" : " "
@@ -180,7 +181,9 @@ const AccountScreen = () => {
           )}
 
           <div className="flex justify-end mt-8">
-            <SmallButton className={"w-auto"} />
+          <Link to="/">
+            <Button className={"w-auto"} />
+            </Link>
           </div>
         </div>
       </div>

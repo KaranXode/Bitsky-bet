@@ -3,7 +3,7 @@ import referBg from "../assets/images/referCharBg.png";
 import bonusBg from "../assets/images/bonusCharBg.png";
 import charOne from "../assets/Icons/charOne.png";
 import playBg from "../assets/images/play-of-bg.png";
-import SmallButton from "../Components/SmallButton/SmallButton";
+import Button from "./../Components/Button/Button";
 
 export default function ReferSection() {
   return (
@@ -12,7 +12,6 @@ export default function ReferSection() {
         <div className="relative max-w-[762px] w-full cardOne  mx-auto">
           <img src={referBg} alt="image" className="rounded-[2rem] " />
           <div className="absolute top-[24px] flex items-center justify-end w-full h-full">
-           
             <div className="max-w-[54%] sm:max-w-[50%] p-3">
               <p className="sm:text-2xl md:text-3xl 2xl:text-5xl font-cevicheOne">
                 Refer Your Friend and Earn Rewards!
@@ -20,7 +19,7 @@ export default function ReferSection() {
               <p className="my-1 sm:my-2 text-[10px] sm:text-sm lg:my-4 xl:text-xl">
                 Refer your friends and enjoy exclusive bonuses and discounts.
               </p>
-             <SmallButton className="w-1/2 sm:w-auto"/>
+              <Button className="w-1/2 sm:w-auto" />
             </div>
           </div>
         </div>
@@ -35,16 +34,16 @@ export default function ReferSection() {
                 Experience unparalleled joy with our exclusive perks, from
                 high-stakes adventures to unforgettable triumphs!
               </p>
-              <SmallButton className="w-1/2 sm:w-auto -scale-x-100" textDirection="-scale-x-100"/>
-
-
+              <Button
+                className="w-1/2 sm:w-auto -scale-x-100"
+                textDirection="-scale-x-100"
+              />
             </div>
           </div>
         </div>
       </div>
       <div>
         <img src={playBg} alt="img" />
-        
       </div>
     </div>
   );
