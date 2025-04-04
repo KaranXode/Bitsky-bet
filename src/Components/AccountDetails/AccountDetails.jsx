@@ -23,6 +23,7 @@ export default function AccountDetails() {
                 borderBottom: index % 2 === 0 ? "1px solid white" : "none",
                 borderTop: index % 2 !== 0 ? "1px solid white" : "none",
                 borderImage: "none",
+                borderRadius: "0",
               }}
               onFocus={(e) => {
                 e.target.style.borderImage =
