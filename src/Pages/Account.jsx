@@ -4,6 +4,9 @@ import headBg from "../assets/Icons/accountHeadbg.svg";
 import SmallButton from "../Components/SmallButton/SmallButton";
 import inBitskyLogo from "../assets/Icons/inBitskyLogo.svg";
 import headerBg from "../assets/Icons/headerBg.svg";
+import LshapeTopLeft from "../assets/Icons/Lshape-topLeft.svg";
+import LshapeTopRight from "../assets/Icons/Lshape-topRight.svg";
+import CircleDot from "../Components/CircleDot/CircleDot";
 
 const AccountScreen = () => {
   const [activeTab, setActiveTab] = useState("My Account");
@@ -12,7 +15,7 @@ const AccountScreen = () => {
 
   return (
     <div className="min-h-screen text-white bg-[#0E0E0E]" id="Profile">
-      <div className="flex flex-wrap items-center justify-between ">
+      <div className="flex items-center justify-between ">
         <img src={inBitskyLogo} alt="logo" />
         <div className="relative ">
           <div className="">
@@ -42,24 +45,35 @@ const AccountScreen = () => {
 
       <div className="max-w-[1346px] w-full mx-auto">
         <div className="flex justify-center mt-5">
-          <div className="flex flex-wrap justify-between w-full px-12 pb-2">
-            {tabs.map((tab) => (
-              <span
-                key={tab}
-                className={`cursor-pointer text-sm md:text-base pb-1 px-4 py-2 rounded-t-lg ${
-                  activeTab === tab
-                    ? "bg-gradient-to-r from-pink-500 to-purple-500 text-white"
-                    : "text-gray-400"
-                }`}
-                onClick={() => setActiveTab(tab)}
-              >
-                {tab}
-              </span>
+          <div className="flex justify-between w-full px-10 pb-2">
+            {tabs.map((tab, index) => (
+              <div className={`relative w-full  ${
+                index % 2 ? "border-bottom-main" : " "
+              }`}>
+                <span
+                  key={tab}
+                  className={`cursor-pointer text-sm xl:text-2xl pb-1 font-cevicheOne flex justify-center items-center ${
+                    index % 2 ? " trapezoid-bottom" : " trapezoid-top"
+                  }  ${
+                    activeTab === tab
+                      ? "tab-active text-white"
+                      : "text-gray-400"
+                  }`}
+                  onClick={() => setActiveTab(tab)}
+                >
+                  <span>{tab}</span>
+                </span>
+                {index % 2 ? (
+                  <CircleDot className={"circleTopRight"} />
+                ) : (
+                  <CircleDot className={"circleBottomRight"} />
+                )}
+              </div>
             ))}
           </div>
         </div>
 
-        <div className="relative p-3 m-3 md:p-8 md:mx-auto mt-10 bg-[#1B1B1B]  rounded-lg">
+        <div className="relative p-3 m-3 md:p-8  mt-10 bg-[#1B1B1B]  rounded-lg">
           <div className="absolute top-0 transform -translate-x-1/2 left-1/2">
             <div className="relative">
               <img src={headBg} alt="icon" className="min-w-[246px]" />
@@ -69,9 +83,21 @@ const AccountScreen = () => {
               </span>
             </div>
           </div>
+          <div className="absolute top-[-7px] left-[-5px]">
+            <img src={LshapeTopLeft} alt="icon" />
+          </div>
+          <div className="absolute top-[-7px] right-[-5px]">
+            <img src={LshapeTopRight} alt="icon" />
+          </div>
+          <div className="absolute bottom-[26px] right-[-5px]">
+            <span className="triangle-br"></span>
+          </div>
+          <div className="absolute bottom-[26px] left-[-5px]">
+            <span className="triangle-bl"></span>
+          </div>
 
           {activeTab === "My Account" && (
-            <div className="flex flex-col items-center w-full mt-12 lg:flex-row" >
+            <div className="flex flex-col items-center w-full mt-12 lg:flex-row">
               <div className="flex flex-col items-center w-1/2 mt-10">
                 <div className="relative">
                   <img src={profile} alt="Avatar" className="" />
