@@ -1,7 +1,6 @@
 import React from "react";
 import referBg from "../assets/images/referCharBg.png";
 import bonusBg from "../assets/images/bonusCharBg.png";
-import charOne from "../assets/Icons/charOne.png";
 import playBg from "../assets/images/play-of-bg.png";
 import Button from "./../Components/Button/Button";
 
