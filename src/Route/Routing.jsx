@@ -9,7 +9,6 @@ export default function Routing() {
         <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/myaccount" element={<AccountScreen/>} />
-
       </Routes>
     </div>
   )

@@ -7,10 +7,6 @@ import facebook from "../assets/images/Facebook.svg";
 import whatsapp from "../assets/images/WhatsApp.svg";
 import tiktok from "../assets/images/TikTok.svg";
 
-
-
-
-
 export default function SocialMedia() {
   const socialMediaData = [
     { name: "Youtube", icon: youtube },
@@ -18,8 +14,7 @@ export default function SocialMedia() {
     { name: "Twitch", icon: twitch },
     { name: "Facebook", icon: facebook },
     { name: "WhatsApp", icon: whatsapp },
-
-    { name: "Til Tok", icon: tiktok },
+    { name: "Tik Tok", icon: tiktok },
   ];
   return (
     <div className="relative wrapper">

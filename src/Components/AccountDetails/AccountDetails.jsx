@@ -1,11 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import CircleDot from "./../CircleDot/CircleDot";
 
-export default function AccountDetails() {
+export default function AccountDetails({userGameName}) {
+  const [firstName, setFirstName] = useState("First Name");
+  const [lastName, setLastName] = useState("Last Name");
+  const [userName, setUserName] = useState("User Name");
+
   const formFields = [
-    { type: "text", placeholder: "First Name" },
-    { type: "text", placeholder: "Last Name" },
-    { type: "text", placeholder: "User Name" },
+    {
+      type: "text",
+      placeholder: "First Name",
+      value: firstName,
+      onChange: setFirstName,
+    },
+    {
+      type: "text",
+      placeholder: "Last Name",
+      value: lastName,
+      onChange: setLastName,
+    },
+    {
+      type: "text",
+      placeholder: "User Name",
+      value: userName,
+      onChange: (val) => {
+        setUserName(val);
+        userGameName(val); 
+      }
+    },
     { type: "text", placeholder: "Date of Birth" },
     { type: "email", placeholder: "Email Address" },
     { type: "text", placeholder: "Phone Number" },
@@ -16,6 +38,11 @@ export default function AccountDetails() {
         {formFields.map((field, index) => (
           <div key={index} className="relative">
             <input
+              onInput={
+                field.onChange
+                  ? (e) => field.onChange(e.target.value)
+                  : undefined
+              }
               type={field.type}
               placeholder={field.placeholder}
               className="w-full p-2 text-xs font-semibold text-white placeholder-white bg-transparent border-none outline-none md:px-10 md:py-4 md:text-sm md:text-base placeholder:font-semibold focus:outline-none"
@@ -53,6 +80,9 @@ export default function AccountDetails() {
             )}
           </div>
         ))}
+        {/* <p>{firstName}</p>
+        <p>{lastName}</p>
+        <p>{userName}</p> */}
       </div>
     </>
   );

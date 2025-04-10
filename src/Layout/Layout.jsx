@@ -8,13 +8,13 @@ import SocialMedia from '../Pages/SocialMedia';
 
 export default function Layout() {
   return (
-    <div>
+    <>
         <Hero/>
         <WelcomeBanner/>
         <ReferSection/>
         <PopularGames/>
         <SubscribeSection/>
         <SocialMedia/>
-    </div>
+    </>
   )
 }

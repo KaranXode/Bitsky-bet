@@ -1,11 +1,7 @@
 import React from "react";
 import FIcon from "../../assets/Icons/footer-icon.svg";
-import telegram from "../../assets/Icons/telegram.svg";
-import discord from "../../assets/Icons/discord.svg";
-import twitter from "../../assets/Icons/twitter.svg";
-import instgram from "../../assets/Icons/instagram.svg";
-import youtube from "../../assets/Icons/youtube.svg";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import SocialMedia from "../SocialMedia/SocialMedia";
 
 export default function Footer() {
   return (
@@ -15,7 +11,9 @@ export default function Footer() {
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
             <div>
               <div className="flex justify-center text-teal-300 sm:justify-start">
-              <Link to="/"><img src={FIcon} alt="Icon" /></Link>
+                <Link to="/">
+                  <img src={FIcon} alt="Icon" />
+                </Link>
               </div>
 
               <p className="max-w-md mx-auto mt-6 leading-relaxed text-center footer-text sm:mx-0 sm:text-left">
@@ -31,21 +29,21 @@ export default function Footer() {
                 <nav className="mt-3">
                   <ul className="space-y-4 text-sm footer-text">
                     <li>
-                      <a className="transition hover:text-white/75" href="/">
+                      <Link className="transition hover:text-white/75" to="/">
                         Casino
-                      </a>
+                      </Link>
                     </li>
 
                     <li>
-                      <a className="transition hover:text-white/75" href="/">
+                      <Link to="/" className="transition hover:text-white/75">
                         Sportsbook
-                      </a>
+                      </Link>
                     </li>
 
                     <li>
-                      <a className="transition hover:text-white/75" href="/">
+                      <Link to="/" className="transition hover:text-white/75">
                         FAQ
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </nav>
@@ -57,25 +55,25 @@ export default function Footer() {
                 <nav className="mt-3">
                   <ul className="space-y-4 text-sm footer-text">
                     <li>
-                      <a className="transition hover:text-white/75" href="/">
+                      <Link to="/" className="transition hover:text-white/75">
                         About us
-                      </a>
+                      </Link>
                     </li>
 
                     <li>
-                      <a className="transition hover:text-white/75" href="/">
+                      <Link to="/" className="transition hover:text-white/75">
                         Privacy Policy
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a className="transition hover:text-white/75" href="/">
+                      <Link to="/" className="transition hover:text-white/75">
                         Terms and Conditions
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a className="transition hover:text-white/75" href="/">
+                      <Link to="/" className="transition hover:text-white/75">
                         How To Play
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </nav>
@@ -86,97 +84,39 @@ export default function Footer() {
 
                 <ul className="mt-3 space-y-4 text-sm footer-text">
                   <li>
-                    <a
-                      className="flex items-center justify-center gap-1 sm:justify-start group"
-                      href="/"
-                    >
+                    <Link className="flex items-center justify-center gap-1 sm:justify-start group">
                       Support:
                       <span className="font-light text-white transition group-hover:text-white/75">
                         support@bitsky.com{" "}
                       </span>
-                    </a>
+                    </Link>
                   </li>
 
                   <li>
-                    <a
+                    <Link
+                      to="/"
                       className="flex items-center justify-center gap-1 sm:justify-start group"
-                      href="/"
                     >
                       Partners:
                       <span className="font-light text-white transition group-hover:text-white/75">
                         partners@bitsky.com{" "}
                       </span>
-                    </a>
+                    </Link>
                   </li>
 
                   <li className="flex items-start justify-center gap-1.5 sm:justify-start">
-                    <a
+                    <Link
+                      to="/"
                       className="flex items-center justify-center gap-1 sm:justify-start group"
-                      href="/"
                     >
                       Legal:
                       <span className="font-light text-white transition group-hover:text-white/75">
                         legal@bitsky.com{" "}
                       </span>
-                    </a>
+                    </Link>
                   </li>
                 </ul>
-                <ul className="flex justify-center gap-3 mt-4 sm:justify-start">
-                  <li>
-                    <a
-                      href="/"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                      className="text-teal-500 transition hover:text-teal-500/75 "
-                    >
-                      <img src={telegram} alt="telegram" className="zoom-effect" />
-                    </a>
-                  </li>
-
-                  <li>
-                    <a
-                      href="/"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                      className="text-teal-500 transition hover:text-teal-500/75 "
-                    >
-                      <img src={discord} alt="discord" className="zoom-effect"/>
-                    </a>
-                  </li>
-
-                  <li>
-                    <a
-                      href="/"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                      className="text-teal-500 transition hover:text-teal-500/75 "
-                    >
-                      <img src={twitter} alt="twitter" className="zoom-effect"/>
-                    </a>
-                  </li>
-
-                  <li>
-                    <a
-                      href="/"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                      className="text-teal-500 transition hover:text-teal-500/75 "
-                    >
-                      <img src={instgram} alt="instgram" className="zoom-effect"/>
-                    </a>
-                  </li>
-
-                  <li>
-                    <a
-                      href="/"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                      className="text-teal-500 transition hover:text-teal-500/75"
-                    >
-                      <img src={youtube} alt="youtube" className="zoom-effect" />
-                    </a>
-                  </li>
-                </ul>
+                <SocialMedia />
               </div>
             </div>
           </div>
