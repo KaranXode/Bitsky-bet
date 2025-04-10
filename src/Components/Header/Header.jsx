@@ -47,7 +47,7 @@ export default function Header() {
               <div className="relative lg:bottom-[10px] w-[150px] lg:w-auto right-[14px]">
                 <img src={avatar} alt="User Avatar" />
                 <span className="absolute top-0 flex items-center justify-center w-full h-full text-xs md:text-sm left-[24px] font-semibold lg:text-base">
-                 {userGameName || "Karan"}
+                 {userGameName || "Karan001"}
                 </span>
               </div>
             </div>
