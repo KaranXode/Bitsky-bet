@@ -5,11 +5,11 @@ import AccountScreen from './../Pages/Account';
 
 export default function Routing() {
   return (
-    <div>
+    <>
         <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/myaccount" element={<AccountScreen/>} />
       </Routes>
-    </div>
+    </>
   )
 }

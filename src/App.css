@@ -7,11 +7,9 @@
   font-family: "Montserrat", sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #0e0e0e;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -19,6 +17,8 @@
   --whiteColor: #ffffff;
   --tabActive: rgb(255, 0, 238);
   --borderColor: #3f3f3f;
+  --blackColor: #000000;
+  --lightGrey: #494949;
 }
 
 .wrapper {
@@ -46,12 +46,12 @@ button:hover img {
     hue-rotate(252deg) brightness(97%) contrast(96%);
 }
 .welcomeBanner {
-  box-shadow: 1px 23px 34px 16px #000000;
-  background-color: #000000;
+  box-shadow: 1px 23px 34px 16px var(--blackColor);
+  background-color: var(--blackColor);
 }
 .arrowIcon {
   padding: 0 72px;
-  background: rgb(0, 0, 0);
+  background: var(--blackColor);
   background: linear-gradient(
     90deg,
     rgba(0, 0, 0, 0.7371323529411764) 0%,
@@ -72,7 +72,7 @@ button:hover img {
   top: 50%;
   height: 2px;
   width: 40%;
-  background-color: #494949;
+  background-color: var(--lightGrey);
 }
 .popular-heading::before {
   content: "";
@@ -82,7 +82,7 @@ button:hover img {
   right: 0;
   height: 2px;
   width: 40%;
-  background-color: #494949;
+  background-color: var(--lightGrey);
 }
 .zoom-effect {
   @apply transition duration-500 transform hover:scale-110;

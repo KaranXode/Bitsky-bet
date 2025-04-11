@@ -10,9 +10,6 @@ import { useState } from 'react';
 
 export default function Header() {
   const [userGameName , setUserGameName ] = useState("")
-
-  
-  
   return (
     <>
       <div className="flex flex-col items-center justify-between md:flex-row ">
